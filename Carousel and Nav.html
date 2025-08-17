@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Navigation and Slider</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: cursive;
+        }
+    
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(243, 0, 0);
+        }
+    
+        .topnav a {
+            float: left;
+            color: rgb(13, 0, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+    
+        topnav a:hover {
+            background-color: coral;
+            color: cornflowerblue;
+        }
+    
+        .topnav a:active {
+            background-color: crimson;
+            color: darksalmon;
+    
+        }
+    </style>
+    <style>
+        body{
+      background-color: #deb878;
+    }
+    h1{
+      text-align: center;
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px; 
+ 
+    .myslides {
+      display: none;
+      max-height: 100%; 
+      max-width: 100%;
+    </style>
+    </head>
+        <body>
+            <div class="topnav">
+                <a class="active" href="#">Home</a>
+                <a class="active" href="#">About Me</a>
+                <a class="active" href="#">Contact Us</a>
+                <a class="active" href="#">Gallery</a>
+            </div>
+
+            <h1>Best Tennis players</h1>
+            <section>
+                <img class="mySlides" src="tennis.jpeg"style="height:500px;">
+                <img class="mySlides" src="ten.jpeg" style="height:500px;">
+                <img class="mySlides" src="tenns.jpeg" style="height:500px;">
+            </section>
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 3000);
+                }
+            </script>
+    </body>
+</html>
